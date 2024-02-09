@@ -1,5 +1,5 @@
 # shop/routes.py
-from flask import render_template, session, request, redirect, url_for,flash
+from flask import render_template, session, request, redirect, url_for, flash
 from shop import app, db
 
 from shop.admin.forms import RegistrationForm
