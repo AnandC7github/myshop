@@ -2,6 +2,8 @@
 from flask import render_template, session, request, redirect, url_for,flash
 from shop import app, db
 
+from shop.admin.forms import RegistrationForm
+
 @app.route('/')
 def home():
     return "Home page of your shop"
