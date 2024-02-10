@@ -1,8 +1,9 @@
 # shop/routes.py
 from flask import render_template, session, request, redirect, url_for, flash
-from shop import app, db
+from shop import app, db , bcrypt
 
 from shop.admin.forms import RegistrationForm
+import os
 
 @app.route('/')
 def home():
