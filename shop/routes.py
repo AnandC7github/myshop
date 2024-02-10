@@ -15,8 +15,8 @@ def register():
     form = RegistrationForm(request.form)
     if request.method == 'POST' and form.validate():
         hash_password = bcrypt.generate_password_hash(form.password.data)
-        user = User(form.username.data, form.email.data,
-                    form.password.data)
+        user = User(name=form.name.data,username= form.username.data, email = form.email.data,
+                    password = hash_password)
         db_session.add(user)
         flash('Thanks for registering')
         return redirect(url_for('login'))
